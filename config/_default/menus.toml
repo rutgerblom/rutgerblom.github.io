@@ -15,11 +15,11 @@
   weight = 30
 
 [[main]]
-  identifier = "linkedin"
-  pre = "LinkedIn"
+  pre = "linkedin"
+  name = "LinkedIn"
   url = "https://linkedin.com/in/rutgerblom"
   weight = 40
 
 [[footer]]
   name = "Privacy"
-  url = "https://external-link"
+
