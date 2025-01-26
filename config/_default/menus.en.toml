@@ -1,6 +1,7 @@
 [[main]]
   name = "Blog"
   pageRef = "posts"
+  layout = "background"
   weight = 10
 
 #[[main]]
