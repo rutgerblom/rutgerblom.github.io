@@ -1,3 +1,5 @@
+title = "My awesome website"
+
 [params.author]
 name = "Rutger Blom"
 image = "img/author.jpg"
