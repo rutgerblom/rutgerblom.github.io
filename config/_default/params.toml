@@ -1,3 +1,5 @@
 colorScheme = "noir"
 defaultAppearance = "dark"
 enableCodeCopy = true
+homepage.layout = "hero"
+homepage.homepageImage = "img/background.jpg"
