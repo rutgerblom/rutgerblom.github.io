@@ -1,0 +1,25 @@
+[[main]]
+  name = "Blog"
+  pageRef = "posts"
+  weight = 10
+
+[[main]]
+  name = "Topics"
+  pageRef = "topics"
+  weight = 20
+
+[[main]]
+  pre = "github"
+  name = "GitHub"
+  url = "https://github.com/rutgerblom"
+  weight = 30
+
+[[main]]
+  identifier = "linkedin"
+  pre = "LinkedIn"
+  url = "https://linkedin.com/in/rutgerblom"
+  weight = 40
+
+[[footer]]
+  name = "Privacy"
+  url = "https://external-link"
