@@ -20,6 +20,6 @@
   url = "https://linkedin.com/in/rutgerblom"
   weight = 40
 
-[[footer]]
-  name = "Privacy"
+#[[footer]]
+#  name = "Privacy"
 
