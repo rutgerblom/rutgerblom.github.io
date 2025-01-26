@@ -6,6 +6,6 @@ image = "img/author.jpg"
 headline = "Senior Consultant"
 bio = "A little bit about me"
 links = [
-  { github = "https://github.com/rutgerblom" }
+  { github = "https://github.com/rutgerblom" },
   { linkedin = "https://linkedin.com/in/rutgerblom" }
 ]
