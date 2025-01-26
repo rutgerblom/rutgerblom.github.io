@@ -1,7 +1,7 @@
 +++
 date = '2025-01-26T11:03:30+01:00'
 title = 'Avi Load Balancer Metrics with Prometheus and Grafana'
-categories =
+categories = ['avi', 'kubernetes', 'nsx']
 tags = ['ako', 'alb', 'avi', 'avi api proxy', 'broadcom', 'cloud', 'devops', 'grafana', 'k8s', 'kubernetes', 'load balancer', 'metrics', 'nsx', 'observability', 'prometheus', 'sddc', 'vmware']
 +++
 
