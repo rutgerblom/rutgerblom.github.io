@@ -13,6 +13,12 @@ enableEmoji = true
 
 # googleAnalytics = "G-XXXXXXXXX"
 
+[permalinks]
+  [permalinks.page]
+    posts = '/articles/:year/:month/:slug/'
+  [permalinks.section]
+    posts = '/articles/'
+
 [pagination]
   pagerSize = 100
 
