@@ -3,3 +3,4 @@ defaultAppearance = "dark"
 enableCodeCopy = true
 homepage.layout = "background"
 homepage.homepageImage = "img/background.jpg"
+homepage.showRecent = true
