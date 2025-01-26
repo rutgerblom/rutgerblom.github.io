@@ -6,8 +6,6 @@ theme = "blowfish"
 baseURL = "https://rutgerblom.github.io/"
 defaultContentLanguage = "en"
 
-colorScheme = "blowfish"
-
 enableRobotsTXT = true
 summaryLength = 0
 
