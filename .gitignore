@@ -1,0 +1,6 @@
+# Ignore the public folder where Hugo generates static files
+/public/
+
+# Ignore other build artifacts or large files
+*.log
+*.tmp
