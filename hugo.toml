@@ -3,8 +3,6 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish"
-baseURL = "https://rutgerblom.github.io/"
-defaultContentLanguage = "en"
 
 enableRobotsTXT = true
 summaryLength = 0
