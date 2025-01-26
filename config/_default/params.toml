@@ -16,6 +16,7 @@ mainSections = ["posts"]
   layoutBackgroundBlur = true # only used when layout equals background
 
 [article]
+  homepageImage = "img/background.jpg"
   showDate = true
   showViews = false
   showLikes = false
