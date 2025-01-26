@@ -15,7 +15,7 @@ enableEmoji = true
 
 [permalinks]
   [permalinks.page]
-    posts = '/articles/:year/:month/:slug/'
+    posts = '/articles/:year/:month/:day/:slug/'
   [permalinks.section]
     posts = '/articles/'
 
