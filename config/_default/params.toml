@@ -7,6 +7,7 @@ mainSections = ["posts"]
   layout = "background"
   homepageImage = "img/background.jpg"
   showRecent = true
+  showSummary = true
   summaryLength = 30
   showRecentItems = 5
   showMoreLink = true
