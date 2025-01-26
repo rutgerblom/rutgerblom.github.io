@@ -16,8 +16,6 @@ mainSections = ["posts"]
   layoutBackgroundBlur = true # only used when layout equals background
 
 [article]
-  layout = "background"
-  homepageImage = "img/background.jpg"
   showDate = true
   showViews = false
   showLikes = false
@@ -45,5 +43,5 @@ mainSections = ["posts"]
   showTaxonomies = true
   showAuthorsBadges = false
   showWordCount = true
-  sharingLinks = [ "linkedin", "x", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
+  sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
   showZenMode = false
