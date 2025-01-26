@@ -3,8 +3,9 @@ title = "My awesome website"
 [params.author]
 name = "Rutger Blom"
 image = "img/author.jpg"
-headline = "A generally awesome human"
+headline = "Senior Consultant"
 bio = "A little bit about me"
 links = [
+  { github = "https://github.com/rutgerblom" }
   { linkedin = "https://linkedin.com/in/rutgerblom" }
 ]
