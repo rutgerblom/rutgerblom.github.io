@@ -6,6 +6,15 @@ theme = "blowfish"
 baseURL = "https://rutgerblom.github.io/"
 defaultContentLanguage = "en"
 
+[params.author]
+name = "Rutger Blom"
+image = "img/author.jpg"
+headline = "A generally awesome human"
+bio = "A little bit about me"
+links = [
+  { linkedin = "https://linkedin.com/in/rutgerblom" }
+]
+
 enableRobotsTXT = true
 summaryLength = 0
 
