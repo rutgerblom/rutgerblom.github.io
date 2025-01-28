@@ -6,9 +6,9 @@ mainSections = ["posts"]
 [homepage]
   layout = "background"
   homepageImage = "img/background.jpg"
-  showRecent = true
+  showRecent = false
   showRecentItems = 5
-  showMoreLink = true
+  showMoreLink = false
   showMoreLinkDest = "/posts/"
   cardView = true
   cardViewScreenWidth = false
