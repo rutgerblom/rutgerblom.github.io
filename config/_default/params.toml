@@ -5,7 +5,7 @@ enableCodeCopy = true
 mainSections = ["posts"]
 
 [homepage]
-  layout = "profile"
+  layout = "background"
   # homepageImage = "img/background.jpg"
   showRecent = true
   showRecentItems = 5
