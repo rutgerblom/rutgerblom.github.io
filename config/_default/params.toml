@@ -18,7 +18,7 @@ mainSections = ["posts"]
 [article]
   showDate = true
   showViews = false
-  showLikes = true
+  showLikes = false
   showDateOnlyInArticle = false
   showDateUpdated = false
   showAuthor = false
