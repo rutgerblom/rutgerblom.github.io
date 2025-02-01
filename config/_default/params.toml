@@ -5,7 +5,7 @@ mainSections = ["posts"]
 
 [homepage]
   layout = "background"
-  homepageImage = "img/background.jpg"
+  # homepageImage = "img/background.jpg"
   showRecent = true
   showRecentItems = 5
   showMoreLink = false
