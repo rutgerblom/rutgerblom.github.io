@@ -3,9 +3,8 @@ title = "rutgerblom.github.io"
 [params.author]
 name = "Rutger Blom"
 image = "img/author.jpg"
-headline = "Senior Consultant"
+headline = "Photographer"
 #bio = ""
 links = [
-  { linkedin = "https://linkedin.com/in/rutgerblom" },
-  { github = "https://github.com/rutgerblom" }
+  { flickr = https://flickr.com/photos/rutgerblom/}
 ]
