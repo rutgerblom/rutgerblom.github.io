@@ -4,3 +4,5 @@ date: "2025-02-01"
 layout: "simple"
 ---
 ![Scandinavian Coldness!](featured.jpg "Scandinavian Coldness")
+
+{{ $image := .Resources.Get "featured.jpg" }}
