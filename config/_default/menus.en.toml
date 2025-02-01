@@ -11,7 +11,7 @@
 [[main]]
   pre = "flickr"
   name = "Flickr"
-  url = "https://flickr.com/photos/rutgerblom"
+  url = "https://flickr.com/people/rutgerblom"
   weight = 30
 
 #[[footer]]
