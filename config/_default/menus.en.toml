@@ -9,9 +9,9 @@
 #  weight = 20
 
 [[main]]
-  pre = "Flickr"
-  name = "LinkedIn"
-  url = "https://flickr.com/photos/rutgerblom/"
+  pre = "flickr"
+  name = "Flickr"
+  url = "https://linkedin.com/in/rutgerblom"
   weight = 30
 
 #[[footer]]
