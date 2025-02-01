@@ -1,5 +1,5 @@
 ---
-title: "Scandinavian Coldness"
+title: "Grow"
 date: "2025-02-01"
 layout: "simple"
 ---
