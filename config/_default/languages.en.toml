@@ -6,5 +6,5 @@ image = "img/author.jpg"
 headline = "Photographer"
 #bio = ""
 links = [
-  { flickr = https://flickr.com/photos/rutgerblom/}
+  { flickr = https://flickr.com/photos/rutgerblom }
 ]
