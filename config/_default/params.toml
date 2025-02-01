@@ -1,4 +1,5 @@
 colorScheme = "noir"
+autoSwitchAppearance = false
 defaultAppearance = "dark"
 enableCodeCopy = true
 mainSections = ["posts"]
