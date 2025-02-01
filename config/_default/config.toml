@@ -23,6 +23,9 @@ enableEmoji = true
 
 [imaging]
   anchor = 'Center'
+  hint = 'photo'
+  quality = 100
+  resampleFilter = 'Lanczos'
 
 [taxonomies]
   tag = "tags"
@@ -67,9 +70,3 @@ enableEmoji = true
       name = 'fragmentrefs'
       type = 'fragments'
       weight = 10
-
-[imaging]
-  bgColor = '#ffffff'
-  hint = 'photo'
-  quality = 100
-  resampleFilter = 'Lanczos'
