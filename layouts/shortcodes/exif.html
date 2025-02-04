@@ -18,19 +18,18 @@
   {{ end }}
 
   {{ with $originalImage.Exif }}
-    <figcaption style="text-align: center;">
+    <figcaption>
       {{ $alt }}
       <br />
-      {{ with .Tags.Make }}{{ . }}{{ end }}
-      {{ with .Tags.Model }}{{ . }}{{ end }}
-      {{ with .Tags.LensModel }}{{ . }}{{ end }}
-      {{ with .Tags.FNumber }}
+      <span class="exif-item">{{ with .Tags.Make }}{{ . }}{{ end }}</span>
+      <span class="exif-item">{{ with .Tags.Model }}{{ . }}{{ end }}</span>
+      <span class="exif-item">{{ with .Tags.FNumber }}
         {{ $fnumber := div (float .) 1.0 }}  {{/* Convert fraction to decimal */}}
         <i>ƒ/</i>{{ $fnumber }}
-      {{ end }}
-      {{ with .Tags.FocalLength }}{{ . }}mm{{ end }}
-      {{ with .Tags.ExposureTime }}{{ . }}{{ end }}
-      {{ with .Tags.ISO }}ISO {{ . }}{{ end }}
+      {{ end }}</span>
+      <span class="exif-item">{{ with .Tags.FocalLength }}{{ . }}mm{{ end }}</span>
+      <span class="exif-item">{{ with .Tags.ExposureTime }}{{ . }}{{ end }}</span>
+      <span class="exif-item">{{ with .Tags.ISO }}ISO {{ . }}{{ end }}</span>
     </figcaption>
   {{ end }}
 </figure>

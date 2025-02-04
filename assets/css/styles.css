@@ -1,0 +1,14 @@
+.exif-item {
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  .exif-item::after {
+    content: "•";
+    margin-left: 8px;
+  }
+  
+  .exif-item:last-child::after {
+    content: "";
+  }
+  
