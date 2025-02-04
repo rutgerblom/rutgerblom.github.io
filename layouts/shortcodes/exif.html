@@ -21,7 +21,7 @@
 {{ with $originalImage.Exif }}
 <figcaption>{{ $alt }}
   <br />
-  {{ with .Tags.Make }}{{ printf "%s%s" (upper (slice . 0 1)) (lower (slice . 1)) }}{{ end }}
+  {{ with .Tags.Make }}{{ printf "%s%s" (upper (slice (string .) 0 1)) (lower (slice (string .) 1)) }}{{ end }}
   {{ with .Tags.Model }}{{ . }}{{ end }}  
   {{ with .Tags.LensModel }}{{ . }}{{ end }}  
   {{ with .Tags.FNumber }}
