@@ -6,10 +6,6 @@
 
 {{- $originalImage := .Page.Resources.GetMatch $imageName -}}
 
-{{ if not $originalImage }}
-  {{ errorf "EXIF shortcode error: Image '%s' not found in post directory '%s'" $imageName $postDir }}
-{{ end }}
-
 <figure>
   {{ with $originalImage }}
     <img src="{{ .RelPermalink }}" alt="{{ $alt }}">
@@ -20,11 +16,11 @@
   {{ with $originalImage.Exif }}
     <figcaption>
       {{ with .Tags.Make }}{{ . }}{{ end }}
-      {{ with .Tags.Model }} {{ . }}{{ end }}
-      {{ if .Tags.Make }} - {{ end }} 
+      {{ with .Tags.Model }} • {{ . }}{{ end }}
+      {{ if .Tags.Make }} • {{ end }} 
       {{ with .Tags.FNumber }} ƒ/{{ div (float .) 1.0 }}{{ end }}
-      {{ with .Tags.ExposureTime }} - {{ . }}{{ end }}
-      {{ with .Tags.ISO }} - ISO {{ . }}{{ end }}
+      {{ with .Tags.ExposureTime }} • {{ . }}{{ end }}
+      {{ with .Tags.ISO }} • ISO {{ . }}{{ end }}
     </figcaption>
   {{ end }}
 </figure>
