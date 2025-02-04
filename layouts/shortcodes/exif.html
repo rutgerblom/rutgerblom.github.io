@@ -16,19 +16,21 @@
   {{ else }}
     <p>Error: Image {{ $imagePath }} not found</p>
   {{ end }}
-
-  {{ with $originalImage.Exif }}
-    <figcaption>
-      {{ $fields := slice }}
-      {{ with .Tags.Make }}{{ $fields = append $fields . }}{{ end }}
-      {{ with .Tags.Model }}{{ $fields = append $fields . }}{{ end }}
-      {{ with .Tags.FNumber }}{{ $fields = append $fields (printf "ƒ/%.1f" (float .)) }}{{ end }}
-      {{ with .Tags.FocalLength }}{{ $fields = append $fields . " " . . }}{{ end }}
-      {{ with .Tags.ExposureTime }}{{ $fields = append $fields . " " . . }}{{ end }}
-      {{ with .Tags.ISO }}{{ $fields = append $fields "ISO " . }}{{ end }}
-
-      {{ $fields := delimit $fields " " }}  {{/* Delimit with space */}}
-      {{ $fields }}
-    </figcaption>
-  {{ end }}
 </figure>
+
+{{ with $originalImage.Exif }}
+<figcaption>{{ $alt }}
+  <br />
+  {{ with .Tags.Make }}{{ . }}{{ end }}
+  {{ with .Tags.Model }}{{ . }}{{ end }}
+  {{ with .Tags.LensModel }}{{ . }}{{ end }}
+  {{ with .Tags.FNumber }}
+    {{ $fnumber := div (float .) 1.0 }}  {{/* Convert fraction to decimal */}}
+    <i>ƒ/</i>{{ $fnumber }}
+  {{ end }}
+  {{ with .Tags.FocalLength }}{{ . }}mm{{ end }}
+  {{ with .Tags.ExposureTime }}{{ . }}{{ end }}
+  {{ with .Tags.ISO }}ISO {{ . }}{{ end }}
+</figcaption>
+{{ end }}
+
