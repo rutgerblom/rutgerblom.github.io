@@ -6,7 +6,6 @@
 
 {{- $originalImage := .Page.Resources.GetMatch $imageName -}}
 
-
 {{ if not $originalImage }}
   {{ errorf "EXIF shortcode error: Image '%s' not found in post directory '%s'" $imageName $postDir }}
 {{ end }}
@@ -24,13 +23,16 @@
   <br />
   {{ with .Tags.Model }}{{ . }}{{ end }}  
   {{ with .Tags.LensModel }}{{ . }}{{ end }}  
-  {{ with .Tags.FNumber }}<i>f</i>{{ . }}{{ end }}  
+  {{ with .Tags.FNumber }}
+    {{ $fnumber := div (float .) 1.0 }}  {{/* Convert fraction to decimal */}}
+    <i>ƒ/</i>{{ $fnumber }}
+  {{ end }}  
   {{ with .Tags.FocalLength }}{{ . }}mm{{ end }}  
   {{ with .Tags.ExposureTime }}{{ . }}{{ end }}  
   {{ with .Tags.ISOSpeedRatings }}ISO {{ . }}{{ end }}  
   <br />
-  {{ with .Tags.Artist }}{{ . }} - {{ end }}  
-  {{ with .Tags.DateTimeOriginal }}{{ . }} - {{ end }}  
+  {{ with .Tags.Artist }}{{ . }} - {{ end }} 
   {{ with .Tags.Copyright }}{{ . }}{{ end }}
 </figcaption>
 {{ end }}
+
