@@ -30,9 +30,9 @@
   {{ end }}  
   {{ with .Tags.FocalLength }}{{ . }}mm{{ end }}  
   {{ with .Tags.ExposureTime }}{{ . }}{{ end }}  
-  {{ with .Tags.ISOSpeedRatings }}ISO {{ . }}{{ end }}  
-  <br />
-  {{ with .Tags.Copyright }}{{ . }}{{ end }}
+  {{ with .Tags.ISOSpeedRatings }}ISO {{ . }}{{ end }}
+  {{ with .Tags.ISOSpeedRatings }}ISO {{ . }}{{ else }}ISO Not Available{{ end }}
+
 </figcaption>
 {{ end }}
 
