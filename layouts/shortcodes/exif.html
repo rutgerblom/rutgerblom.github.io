@@ -16,19 +16,18 @@
   {{ else }}
     <p>Error: Image {{ $imagePath }} not found</p>
   {{ end }}
+
+  {{ with $originalImage.Exif }}
+    <figcaption>
+      {{ with .Tags.Make }}{{ . }}{{ end }}
+      {{ with .Tags.Model }} {{ . }}{{ end }}
+      {{ with .Tags.FNumber }}
+        <i>ƒ/</i>{{ div (float .) 1.0 }}  {{/* Convert fraction to decimal */}}
+      {{ end }}
+      {{ with .Tags.ExposureTime }}{{ . }}{{ end }}
+      {{ with .Tags.ISO }}ISO {{ . }}{{ end }}
+    </figcaption>
+  {{ end }}
 </figure>
 
-{{ with $originalImage.Exif }}
-<figcaption>{{ $alt }}
-  <br />
-  {{ with .Tags.Make }}{{ . }}{{ end }}
-  {{ with .Tags.Model }}{{ . }}{{ end }}
-  {{ with .Tags.FNumber }}
-    {{ $fnumber := div (float .) 1.0 }}  {{/* Convert fraction to decimal */}}
-    <i>ƒ/</i>{{ $fnumber }}
-  {{ end }}
-  {{ with .Tags.ExposureTime }}{{ . }}{{ end }}
-  {{ with .Tags.ISO }}ISO {{ . }}{{ end }}
-</figcaption>
-{{ end }}
 
