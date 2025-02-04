@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ .Scratch.Set "scope" "single" }}
 
-<article>
+<article class="max-w-full">
   {{ if .Params.showHero | default (.Site.Params.article.showHero | default false) }}
   {{ $heroStyle := .Params.heroStyle }}
   {{ if not $heroStyle }}{{ $heroStyle = .Site.Params.article.heroStyle }}{{ end }}
@@ -13,7 +13,7 @@
   {{ end }}
   {{ end }}
 
-  <header id="single_header" class="mt-5 max-w-prose">
+  <header id="single_header" class="mt-5 max-w-full">
     {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false) }}
     {{ partial "breadcrumbs.html" . }}
     {{ end }}
@@ -141,7 +141,7 @@
       {{ end }}
   
     </section>
-  <footer class="pt-8 max-w-prose print:hidden">
+  <footer class="pt-8 max-w-full print:hidden">
 
     {{ partial "article-pagination.html" . }}
     {{ if .Params.showComments | default (.Site.Params.article.showComments | default false) }}
