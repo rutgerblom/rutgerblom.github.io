@@ -1,12 +1,14 @@
-/* Add bullet points for exif items */
-.exif-item::before {
-  content: "•";  /* Add the bullet symbol */
-  margin: 0 8px;  /* Space between the bullet and the text */
-  color: #888;    /* Optional: Set bullet color */
+.exif-caption {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.exif-item {
-  display: inline-block;
-  margin-right: 12px;  /* Add spacing between items */
-  vertical-align: middle;
+.exif-caption span {
+  margin-right: 8px;
+}
+
+.exif-caption span:not(:last-child)::after {
+  content: "•";
+  margin-left: 8px;
 }

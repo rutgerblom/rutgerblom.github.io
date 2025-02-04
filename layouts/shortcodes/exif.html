@@ -18,16 +18,16 @@
   {{ end }}
 
   {{ with $originalImage.Exif }}
-    <figcaption>
+    <figcaption class="exif-caption">
       {{ $fields := slice }}
       {{ with .Tags.Make }}{{ $fields = append $fields . }}{{ end }}
       {{ with .Tags.Model }}{{ $fields = append $fields . }}{{ end }}
-      {{ with .Tags.FNumber }}{{ $fields = append $fields (printf "ƒ/%.1f" (float .)) }}{{ end }}  {{/* Convert fraction to decimal and format properly */}}
+      {{ with .Tags.FNumber }}{{ $fields = append $fields (printf "ƒ/%.1f" (float .)) }}{{ end }}
       {{ with .Tags.FocalLength }}{{ $fields = append $fields . " " . . }}{{ end }}
       {{ with .Tags.ExposureTime }}{{ $fields = append $fields . " " . . }}{{ end }}
       {{ with .Tags.ISO }}{{ $fields = append $fields "ISO " . }}{{ end }}
 
-      {{ $fields := delimit $fields " • " }}  {{/* Delimit with bullet points */}}
+      {{ $fields := delimit $fields " " }}  {{/* Delimit with space */}}
       {{ $fields }}
     </figcaption>
   {{ end }}
