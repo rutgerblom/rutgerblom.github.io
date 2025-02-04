@@ -26,7 +26,7 @@
   {{ with .Tags.LensModel }}{{ . }}{{ end }}  
   {{ with .Tags.FNumber }}<i>f</i>{{ . }}{{ end }}  
   {{ with .Tags.FocalLength }}{{ . }}mm{{ end }}  
-  {{ with .Tags.ExposureTime }}{{ partial "format-exposure-time.html" . }}{{ end }}  
+  {{ with .Tags.ExposureTime }}{{ . }}{{ end }}  
   {{ with .Tags.ISOSpeedRatings }}ISO {{ . }}{{ end }}  
   <br />
   {{ with .Tags.Artist }}{{ . }} - {{ end }}  
