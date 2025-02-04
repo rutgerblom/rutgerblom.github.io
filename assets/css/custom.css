@@ -1,1 +1,9 @@
+figure {
+  text-align: center;  /* Centers content inside the figure */
+}
+
+figcaption {
+  display: inline-block; /* Makes figcaption behave like an inline element */
+  margin-top: 8px;       /* Adds space between the image and caption */
+}
 
