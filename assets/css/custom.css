@@ -1,14 +1,1 @@
-.exif-caption {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
-.exif-caption span {
-  margin-right: 8px;
-}
-
-.exif-caption span:not(:last-child)::after {
-  content: "•";
-  margin-left: 8px;
-}
