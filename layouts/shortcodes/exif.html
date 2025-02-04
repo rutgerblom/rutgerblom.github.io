@@ -4,7 +4,8 @@
 {{- $postDir := .Page.File.Dir -}}  {{/* Get the current post’s directory */}}
 {{- $imagePath := printf "%s%s" $postDir $imageName -}}  {{/* Construct full relative path */}}
 
-{{- $originalImage := resources.Get $imagePath -}}
+{{- $originalImage := .Page.Resources.GetMatch $imageName -}}
+
 
 {{ if not $originalImage }}
   {{ errorf "EXIF shortcode error: Image '%s' not found in post directory '%s'" $imageName $postDir }}
