@@ -21,13 +21,10 @@
     <figcaption>
       {{ with .Tags.Make }}{{ . }}{{ end }}
       {{ with .Tags.Model }} {{ . }}{{ end }}
-      {{ with .Tags.FNumber }}
-        <i>ƒ/</i>{{ div (float .) 1.0 }}  {{/* Convert fraction to decimal */}}
-      {{ end }}
-      {{ with .Tags.ExposureTime }}{{ . }}{{ end }}
-      {{ with .Tags.ISO }}ISO {{ . }}{{ end }}
+      {{ if .Tags.Make }} - {{ end }} 
+      {{ with .Tags.FNumber }} ƒ/{{ div (float .) 1.0 }}{{ end }}
+      {{ with .Tags.ExposureTime }} - {{ . }}{{ end }}
+      {{ with .Tags.ISO }} - ISO {{ . }}{{ end }}
     </figcaption>
   {{ end }}
 </figure>
-
-
