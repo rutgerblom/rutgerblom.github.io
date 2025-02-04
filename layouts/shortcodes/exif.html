@@ -16,9 +16,8 @@
   {{ with $originalImage.Exif }}
     <figcaption>
       {{ with .Tags.Make }}{{ . }}{{ end }}
-      {{ with .Tags.Model }} • {{ . }}{{ end }}
-      {{ if .Tags.Make }} • {{ end }} 
-      {{ with .Tags.FNumber }} ƒ/{{ div (float .) 1.0 }}{{ end }}
+      {{ with .Tags.Model }}{{ if .Tags.Make }} {{ . }}{{ end }}{{ end }}
+      {{ with .Tags.FNumber }} • <i>ƒ/</i>{{ div (float .) 1.0 }}{{ end }}
       {{ with .Tags.ExposureTime }} • {{ . }}{{ end }}
       {{ with .Tags.ISO }} • ISO {{ . }}{{ end }}
     </figcaption>
