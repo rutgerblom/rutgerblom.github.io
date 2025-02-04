@@ -22,7 +22,7 @@
 <figcaption>{{ $alt }}
   <br />
   {{ with .Tags.Make }}
-    {{ $make := string . }}  {{/* Explicitly cast to string */}}
+    {{ $make := . | first }}  {{/* Get the first value if it's an array */}}
     {{ printf "%s%s" (upper (index $make 0)) (lower (slice $make 1)) }}
   {{ end }} 
   {{ with .Tags.Model }}{{ . }}{{ end }}
