@@ -22,9 +22,9 @@
 <figcaption>{{ $alt }}
   <br />
   {{ with .Tags.Make }}
-    {{ $make := . }}
+    {{ $make := string . }}  {{/* Explicitly cast to string */}}
     {{ printf "%s%s" (upper (index $make 0)) (lower (slice $make 1)) }}
-  {{ end }}
+  {{ end }} 
   {{ with .Tags.Model }}{{ . }}{{ end }}
   {{ with .Tags.LensModel }}{{ . }}{{ end }}
   {{ with .Tags.FNumber }}
