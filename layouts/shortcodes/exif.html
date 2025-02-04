@@ -18,7 +18,8 @@
   {{ end }}
 
   {{ with $originalImage.Exif }}
-    <figcaption>{{ $alt }}
+    <figcaption style="text-align: center;">
+      {{ $alt }}
       <br />
       {{ with .Tags.Make }}{{ . }}{{ end }}
       {{ with .Tags.Model }}{{ . }}{{ end }}
