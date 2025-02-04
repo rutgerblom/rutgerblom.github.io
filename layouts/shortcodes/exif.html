@@ -28,11 +28,7 @@
     {{ $fnumber := div (float .) 1.0 }}  {{/* Convert fraction to decimal */}}
     <i>ƒ/</i>{{ $fnumber }}
   {{ end }}
-  {{ with .Tags.FocalLength }}
-    {{ if ne . "X100VI" }}  {{/* Skip printing if model is X100VI */}}
-      {{ . }}mm
-    {{ end }}
-  {{ end }}
+  {{ with .Tags.FocalLength }}{{ . }}mm{{ end }}
   {{ with .Tags.ExposureTime }}{{ . }}{{ end }}
   {{ with .Tags.ISO }}ISO {{ . }}{{ end }}
 </figcaption>
