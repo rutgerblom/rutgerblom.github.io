@@ -18,18 +18,19 @@
   {{ end }}
 
   {{ with $originalImage.Exif }}
-    <figcaption>
-      {{ $alt }}
+    <figcaption>{{ $alt }}
       <br />
-      <span class="exif-item">{{ with .Tags.Make }}{{ . }}{{ end }}</span>
-      <span class="exif-item">{{ with .Tags.Model }}{{ . }}{{ end }}</span>
-      <span class="exif-item">{{ with .Tags.FNumber }}
+      {{ with .Tags.Make }}{{ . }}{{ end }}
+      {{ with .Tags.Model }}{{ if . }} - {{ . }}{{ end }}{{ end }}
+      {{ if .Tags.Make }}<span class="exif-item">•</span>{{ end }}
+      {{ with .Tags.LensModel }}<span class="exif-item">•</span>{{ . }}{{ end }}
+      {{ with .Tags.FNumber }}
         {{ $fnumber := div (float .) 1.0 }}  {{/* Convert fraction to decimal */}}
         <i>ƒ/</i>{{ $fnumber }}
-      {{ end }}</span>
-      <span class="exif-item">{{ with .Tags.FocalLength }}{{ . }}mm{{ end }}</span>
-      <span class="exif-item">{{ with .Tags.ExposureTime }}{{ . }}{{ end }}</span>
-      <span class="exif-item">{{ with .Tags.ISO }}ISO {{ . }}{{ end }}</span>
+      {{ end }}
+      {{ with .Tags.FocalLength }}<span class="exif-item">•</span>{{ . }}mm{{ end }}
+      {{ with .Tags.ExposureTime }}<span class="exif-item">•</span>{{ . }}{{ end }}
+      {{ with .Tags.ISO }}<span class="exif-item">•</span>ISO {{ . }}{{ end }}
     </figcaption>
   {{ end }}
 </figure>
