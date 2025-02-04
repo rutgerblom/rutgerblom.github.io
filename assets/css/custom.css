@@ -7,3 +7,7 @@ figcaption {
   margin-top: 8px;       /* Adds space between the image and caption */
 }
 
+h2.mt-8.text-2xl.font-extrabold.mb-10 {
+  display: none;
+}
+
