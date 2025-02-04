@@ -21,10 +21,7 @@
 {{ with $originalImage.Exif }}
 <figcaption>{{ $alt }}
   <br />
-  {{ with .Tags.Make }}
-    {{ $make := index . 0 }}  {{/* Get the first value from the list */}}
-    {{ printf "%s%s" (upper (slice $make 0 1)) (lower (slice $make 1)) }}
-  {{ end }}
+  {{ with .Tags.Make }}{{ . }}{{ end }}
   {{ with .Tags.Model }}{{ . }}{{ end }}
   {{ with .Tags.LensModel }}{{ . }}{{ end }}
   {{ with .Tags.FNumber }}
