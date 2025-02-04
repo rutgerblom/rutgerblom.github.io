@@ -29,7 +29,7 @@
     <i>ƒ/</i>{{ $fnumber }}
   {{ end }}
   {{ with .Tags.FocalLength }}
-    {{ if ne .Page.Exif.Tags.Model "X100VI" }}  {{/* Skip printing if model is X100VI */}}
+    {{ if ne . "X100VI" }}  {{/* Skip printing if model is X100VI */}}
       {{ . }}mm
     {{ end }}
   {{ end }}
@@ -37,5 +37,3 @@
   {{ with .Tags.ISO }}ISO {{ . }}{{ end }}
 </figcaption>
 {{ end }}
-
-
