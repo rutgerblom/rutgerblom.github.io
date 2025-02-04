@@ -21,15 +21,18 @@
 {{ with $originalImage.Exif }}
 <figcaption>{{ $alt }}
   <br />
-  {{ with .Tags.Make }}{{ printf "%s%s" (upper (slice (string .) 0 1)) (lower (slice (string .) 1)) }}{{ end }}
-  {{ with .Tags.Model }}{{ . }}{{ end }}  
-  {{ with .Tags.LensModel }}{{ . }}{{ end }}  
+  {{ with .Tags.Make }}
+    {{ $make := . }}
+    {{ printf "%s%s" (upper (index $make 0)) (lower (slice $make 1)) }}
+  {{ end }}
+  {{ with .Tags.Model }}{{ . }}{{ end }}
+  {{ with .Tags.LensModel }}{{ . }}{{ end }}
   {{ with .Tags.FNumber }}
     {{ $fnumber := div (float .) 1.0 }}  {{/* Convert fraction to decimal */}}
     <i>ƒ/</i>{{ $fnumber }}
-  {{ end }}  
-  {{ with .Tags.FocalLength }}{{ . }}mm{{ end }}  
-  {{ with .Tags.ExposureTime }}{{ . }}{{ end }}  
+  {{ end }}
+  {{ with .Tags.FocalLength }}{{ . }}mm{{ end }}
+  {{ with .Tags.ExposureTime }}{{ . }}{{ end }}
   {{ with .Tags.ISO }}ISO {{ . }}{{ end }}
 </figcaption>
 {{ end }}
