@@ -18,7 +18,7 @@
   {{ end }}
 
   {{ with $originalImage.Exif }}
-    <figcaption class="exif-caption">
+    <figcaption>
       {{ $fields := slice }}
       {{ with .Tags.Make }}{{ $fields = append $fields . }}{{ end }}
       {{ with .Tags.Model }}{{ $fields = append $fields . }}{{ end }}
