@@ -20,13 +20,12 @@
   {{ with $originalImage.Exif }}
     <figcaption>{{ $alt }}
       <br />
-      {{ with .Tags.Make }}{{ . }}{{ end }}
-      {{ with .Tags.Model }}{{ if . }}{{ . }}{{ end }}{{ end }}
+      {{ with .Tags.Make }}<span class="exif-item">{{ . }}</span>{{ end }}
+      {{ with .Tags.Model }}<span class="exif-item">{{ . }}</span>{{ end }}
       {{ with .Tags.LensModel }}<span class="exif-item">{{ . }}</span>{{ end }}
       {{ with .Tags.FNumber }}
         {{ $fnumber := div (float .) 1.0 }}  {{/* Convert fraction to decimal */}}
-        <i>ƒ/</i>{{ $fnumber }}
-      {{ end }}
+        <i>ƒ/</i><span class="exif-item">{{ $fnumber }}</span>{{ end }}
       {{ with .Tags.FocalLength }}<span class="exif-item">{{ . }}mm</span>{{ end }}
       {{ with .Tags.ExposureTime }}<span class="exif-item">{{ . }}</span>{{ end }}
       {{ with .Tags.ISO }}<span class="exif-item">ISO {{ . }}</span>{{ end }}
