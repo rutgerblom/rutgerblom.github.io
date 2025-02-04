@@ -1,6 +1,6 @@
 ---
 title: "Close Now"
 date: "2025-02-04"
-layout: "simple"
+layout: "single"
 ---
-![Close Now!](featured.jpg "Close Now")
+{{< exif src="featured.jpg" >}}

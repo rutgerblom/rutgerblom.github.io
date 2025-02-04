@@ -1,6 +1,6 @@
 ---
 title: "Tuscan Vineyard"
 date: "2025-02-01"
-layout: "simple"
+layout: "single"
 ---
-![Tuscan Vineyard!](featured.jpg "Tuscan Vineyard")
+{{< exif src="featured.jpg" >}}

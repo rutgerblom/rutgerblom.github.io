@@ -1,6 +1,6 @@
 ---
 title: "Field of Rapeseeds"
 date: "2025-02-01"
-layout: "simple"
+layout: "single"
 ---
-![Field of Rapeseeds!](featured.jpg "Field of Rapeseeds")
+{{< exif src="featured.jpg" >}}

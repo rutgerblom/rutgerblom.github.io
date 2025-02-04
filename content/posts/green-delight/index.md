@@ -1,6 +1,6 @@
 ---
 title: "Green Delight"
 date: "2025-02-04"
-layout: "simple"
+layout: "single"
 ---
-![Green Delight!](featured.jpg "Green Delight")
+{{< exif src="featured.jpg" >}}

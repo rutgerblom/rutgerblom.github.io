@@ -1,6 +1,6 @@
 ---
 title: "Svedala Landscape"
 date: "2025-02-01"
-layout: "simple"
+layout: "single"
 ---
-![Svedala Landscape!](featured.jpg "Svedala Landscape")
+{{< exif src="featured.jpg" >}}
