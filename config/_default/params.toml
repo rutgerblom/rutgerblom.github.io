@@ -50,5 +50,5 @@ mainSections = ["posts"]
   websiteid = "3f710c51-f98a-4d8e-9f09-eea3b55b8226"
   domain = ""
   dataDomains = ""
-  scriptName = "script.js"
+  scriptName = ""
   enableTrackEvent = true
