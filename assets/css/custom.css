@@ -47,7 +47,7 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
 /* Remove bottom padding for the card container */
 .px-6.py-4 {
   padding-bottom: 0 !important;
-  padding-top: 0 !important; /* Optional: Adjust top padding too if needed */
+  padding-top: 0 !important;
 }
 
 /* Hide the date by targeting the container div */
@@ -57,8 +57,15 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
 
 /* Remove space under the title (if needed) or adjust padding for the title container */
 .font-bold.text-xl {
-  padding-bottom: 0 !important; /* Remove space under the title */
+  padding-bottom: 0 !important;
 }
+
+/* Remove bottom margin/padding from any container around the date */
+.text-sm.text-neutral-500 {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 
 
 
