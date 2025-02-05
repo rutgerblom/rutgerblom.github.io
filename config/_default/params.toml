@@ -48,7 +48,7 @@ mainSections = ["posts"]
 
   [umamiAnalytics]
   websiteid = "3f710c51-f98a-4d8e-9f09-eea3b55b8226"
-  domain = ""
-  dataDomains = "photography.rutgerblom.com"
+  #domain = ""
+  #dataDomains = "photography.rutgerblom.com"
   #scriptName = ""
-  enableTrackEvent = true
+  #enableTrackEvent = true
