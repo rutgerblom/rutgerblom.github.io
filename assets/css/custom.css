@@ -23,3 +23,11 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
 #main-content {
   margin-top: 50px; /* Adjust the value as needed */
 }
+
+.thumbnail_card .font-bold.text-xl.text-neutral-800 {
+  display: none;
+}
+
+.thumbnail_card .flex.flex-row.flex-wrap.items-center {
+  display: none;
+}
