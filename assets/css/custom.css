@@ -11,6 +11,7 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   display: none;
 }
 
-body.home #main-content h1 {
+#main-content h1:first-of-type {
   display: none;
 }
+
