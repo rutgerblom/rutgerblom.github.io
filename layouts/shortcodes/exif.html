@@ -15,10 +15,11 @@
 
   {{ with $originalImage.Exif }}
     <figcaption>
-      {{ with .Tags.Model }} • {{ . }}{{ end }}
-      {{ with .Tags.FNumber }} ƒ/{{ div (float .) 1.0 }}{{ end }}
+      {{ with .Tags.Model }}{{ . }}{{ end }}
+      {{ with .Tags.FNumber }} • ƒ/{{ div (float .) 1.0 }}{{ end }}
       {{ with .Tags.ExposureTime }} • {{ . }}{{ end }}
       {{ with .Tags.ISO }} • ISO {{ . }}{{ end }}
     </figcaption>
   {{ end }}
 </figure>
+
