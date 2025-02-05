@@ -15,6 +15,7 @@
 
   {{ with $originalImage.Exif }}
     <figcaption>
+      {{ with .Tags.Title }}{{ . }}{{ end }}
       {{ with .Tags.Make }}{{ . }}{{ end }}
       {{ with .Tags.Model }} • {{ . }}{{ end }}
       {{ if .Tags.Make }} • {{ end }} 
