@@ -20,3 +20,6 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   font-weight: bold; /* Optional: to make it bold */
 }
 
+#main-content {
+  margin-top: 30px; /* Adjust the value as needed */
+}
