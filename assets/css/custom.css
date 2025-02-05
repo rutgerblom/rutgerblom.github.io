@@ -76,6 +76,11 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   padding-bottom: 0 !important; /* Remove bottom padding */
 }
 
+/* Move the image up */
+.article-content .exif-figure {
+  margin-top: -20px !important; /* Adjust the value as needed */
+}
+
 
 
 
