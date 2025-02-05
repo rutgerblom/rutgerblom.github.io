@@ -10,8 +10,3 @@ figcaption {
 h2.mt-8.text-2xl.font-extrabold.mb-10 {
   display: none;
 }
-
-.article-card h2,  /* Post title */
-.article-card p {   /* Date */
-  display: none;
-}
