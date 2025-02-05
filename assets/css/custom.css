@@ -49,11 +49,16 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   display: none;
 }
 
-/* Remove the padding causing the empty space */
+/* Remove any padding for the card container */
 .px-6.pt-4.pb-2 {
-  padding-bottom: 0 !important;
-  padding-top: 0 !important;
+  padding: 0 !important;
 }
+
+/* Remove any additional margin or padding that may cause empty space */
+.px-6, .py-4 {
+  margin-bottom: 0 !important;
+}
+
 
 
 
