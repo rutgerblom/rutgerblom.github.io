@@ -81,6 +81,16 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   margin-top: -20px !important; /* Adjust the value as needed */
 }
 
+/* Hide the year label */
+section h2.mt-12 {
+  display: none;
+}
+
+/* Move the post list higher up */
+section.space-y-10 {
+  margin-top: -20px !important;  /* Adjust the value as needed */
+}
+
 
 
 
