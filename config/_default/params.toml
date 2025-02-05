@@ -12,7 +12,7 @@ mainSections = ["posts"]
   showMoreLink = true
   showMoreLinkDest = "/posts/"
   cardView = true
-  cardViewScreenWidth = true
+  cardViewScreenWidth = false
   layoutBackgroundBlur = false
 
 [article]
