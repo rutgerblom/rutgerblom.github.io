@@ -40,7 +40,7 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
 }
 
 /* Hide the post title inside the card */
-.px-6 .font-bold.text-xl {
+.px-6 .font-bold {
   display: none;
 }
 
@@ -49,15 +49,16 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   display: none;
 }
 
-/* Remove any padding for the card container */
+/* Remove bottom padding for the card container */
+.px-6.py-4 {
+  padding-bottom: 0 !important;
+}
+
+/* Remove empty space caused by a padding div after the title */
 .px-6.pt-4.pb-2 {
   padding: 0 !important;
 }
 
-/* Remove any additional margin or padding that may cause empty space */
-.px-6, .py-4 {
-  margin-bottom: 0 !important;
-}
 
 
 
