@@ -24,3 +24,18 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   margin-top: 50px; /* Adjust the value as needed */
 }
 
+.exif-figure {
+  text-align: center; /* Center all content inside the figure */
+}
+
+.exif-title {
+  font-weight: bold;
+  font-size: 1.2rem; /* Adjust the title size */
+  margin-bottom: 0.5rem; /* Space between title and EXIF details */
+}
+
+.exif-details {
+  font-size: 1rem; /* Adjust the font size of EXIF details */
+  color: #555; /* Optional: set color for EXIF details */
+}
+

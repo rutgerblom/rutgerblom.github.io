@@ -1,14 +1,14 @@
 {{- $imageName := .Get "src" -}}
 {{- $alt := .Get "alt" -}}
 
-{{- $postTitle := .Page.Title -}}  <!-- Capture the post title -->
+{{- $postTitle := .Page.Title -}}
 
 {{- $postDir := .Page.File.Dir -}}  
 {{- $imagePath := printf "%s%s" $postDir $imageName -}}
 
 {{- $originalImage := .Page.Resources.GetMatch $imageName -}}
 
-<figure>
+<figure class="exif-figure">
   {{ with $originalImage }}
     <img src="{{ .RelPermalink }}" alt="{{ $alt }}">
   {{ else }}
@@ -16,12 +16,14 @@
   {{ end }}
 
   {{ with $originalImage.Exif }}
-    <figcaption>
-      {{ $postTitle }} <!-- Display the post title here -->
-      {{ with .Tags.Model }} • {{ . }}{{ end }}
-      {{ with .Tags.FNumber }} • ƒ/{{ div (float .) 1.0 }}{{ end }}
-      {{ with .Tags.ExposureTime }} • {{ . }}{{ end }}
-      {{ with .Tags.ISO }} • ISO {{ . }}{{ end }}
+    <figcaption class="exif-caption">
+      <div class="exif-title">{{ $postTitle }}</div>
+      <div class="exif-details">
+        {{ with .Tags.Model }}{{ . }} • {{ end }}
+        {{ with .Tags.FNumber }}ƒ/{{ div (float .) 1.0 }}{{ end }}
+        {{ with .Tags.ExposureTime }} • {{ . }}{{ end }}
+        {{ with .Tags.ISO }} • ISO {{ . }}{{ end }}
+      </div>
     </figcaption>
   {{ end }}
 </figure>
