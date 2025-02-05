@@ -18,7 +18,6 @@
       {{ with .Tags.Title }}{{ . }}{{ end }}
       {{ with .Tags.Make }}{{ . }}{{ end }}
       {{ with .Tags.Model }} • {{ . }}{{ end }}
-      {{ if .Tags.Make }} • {{ end }} 
       {{ with .Tags.FNumber }} ƒ/{{ div (float .) 1.0 }}{{ end }}
       {{ with .Tags.ExposureTime }} • {{ . }}{{ end }}
       {{ with .Tags.ISO }} • ISO {{ . }}{{ end }}
