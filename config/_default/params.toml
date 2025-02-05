@@ -45,3 +45,10 @@ mainSections = ["posts"]
   showWordCount = false
   # sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
   showZenMode = false
+
+  [umamiAnalytics]
+  websiteid = "3f710c51-f98a-4d8e-9f09-eea3b55b8226"
+  domain = "photography.rutgerblom.com"
+  dataDomains = "photography.rutgerblom.com"
+  scriptName = "script.js"
+  enableTrackEvent = true
