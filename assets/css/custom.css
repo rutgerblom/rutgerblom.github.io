@@ -44,13 +44,14 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   display: none;
 }
 
-/* Remove padding on the div containing the title and date */
+/* Remove extra bottom padding from the div containing the title */
 .px-6.py-4 {
   padding-bottom: 0 !important;
 }
 
-/* Ensure no extra margin for the time/date container */
-.text-sm.text-neutral-500 {
-  margin-bottom: 0 !important;
+/* Hide the date by targeting the container div */
+.text-sm.text-neutral-500 .flex {
+  display: none;
 }
+
 
