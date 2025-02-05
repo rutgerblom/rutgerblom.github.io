@@ -44,26 +44,16 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   display: none;
 }
 
-/* Remove bottom padding for the card container */
-.px-6.py-4 {
-  padding-bottom: 0 !important;
-  padding-top: 0 !important;
-}
-
 /* Hide the date by targeting the container div */
 .text-sm.text-neutral-500 .flex {
   display: none;
 }
 
-/* Remove space under the title (if needed) or adjust padding for the title container */
-.font-bold.text-xl {
-  padding-bottom: 0 !important;
-}
-
-/* Remove padding or hide the empty div causing the extra space */
+/* Remove padding or hide the empty div causing extra space */
 .px-6.pt-4.pb-2 {
   display: none;
 }
+
 
 
 
