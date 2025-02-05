@@ -44,12 +44,13 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   display: none;
 }
 
-/* Hide the post date inside the card */
-.px-6 .text-sm {
-  display: none;
+/* Remove padding on the div containing the title and date */
+.px-6.py-4 {
+  padding-bottom: 0 !important;
 }
 
-.card .px-6.py-4 .text-sm {
-  display: none;
+/* Ensure no extra margin for the time/date container */
+.text-sm.text-neutral-500 {
+  margin-bottom: 0 !important;
 }
 
