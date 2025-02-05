@@ -65,6 +65,11 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   display: none;
 }
 
+/* Hide the date above the image */
+.flex.flex-row.flex-wrap.items-center {
+  display: none;
+}
+
 
 
 
