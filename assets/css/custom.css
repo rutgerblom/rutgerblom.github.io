@@ -43,3 +43,9 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
 .px-6 .font-bold {
   display: none;
 }
+
+/* Hide the post date inside the card */
+.px-6 .text-sm {
+  display: none;
+}
+
