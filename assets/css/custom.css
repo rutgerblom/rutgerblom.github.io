@@ -39,3 +39,7 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   color: #555; /* Optional: set color for EXIF details */
 }
 
+/* Hide the post title inside the card */
+.px-6 .font-bold {
+  display: none;
+}
