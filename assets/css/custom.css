@@ -11,7 +11,7 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   display: none;
 }
 
-h1:nth-of-type(2) {
+nav a[href="/"] {
   display: none;
 }
 
