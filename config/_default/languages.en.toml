@@ -1,4 +1,7 @@
 title = "Rutger Blom Photography"
+languageCode = "en"
+languageName = "English"
+weight = 1
 
 [params.author]
 name = "Rutger Blom"
