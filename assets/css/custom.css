@@ -60,11 +60,11 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   padding-bottom: 0 !important;
 }
 
-/* Remove bottom margin/padding from any container around the date */
-.text-sm.text-neutral-500 {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+/* Remove padding or hide the empty div causing the extra space */
+.px-6.pt-4.pb-2 {
+  display: none;
 }
+
 
 
 
