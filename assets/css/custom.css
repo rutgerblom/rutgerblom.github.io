@@ -70,6 +70,13 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   display: none;
 }
 
+/* Remove the space left by the hidden date */
+.flex.flex-row.flex-wrap.items-center {
+  margin-bottom: 0 !important; /* Remove bottom margin */
+  padding-bottom: 0 !important; /* Remove bottom padding */
+}
+
+
 
 
 
