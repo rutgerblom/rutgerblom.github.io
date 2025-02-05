@@ -1,9 +1,8 @@
 {{- $imageName := .Get "src" -}}
 {{- $alt := .Get "alt" -}}
-{{- $title := .Get "title" -}}  {{/* Get the title passed as a parameter */}}
 
-{{- $postDir := .Page.File.Dir -}}  
-{{- $imagePath := printf "%s%s" $postDir $imageName -}}
+{{- $postDir := .Page.File.Dir -}}  {{/* Get the current post’s directory */}}
+{{- $imagePath := printf "%s%s" $postDir $imageName -}}  {{/* Construct full relative path */}}
 
 {{- $originalImage := .Page.Resources.GetMatch $imageName -}}
 
@@ -16,12 +15,11 @@
 
   {{ with $originalImage.Exif }}
     <figcaption>
-      {{ if $title }}<div class="post-title">{{ $title }}</div>{{ end }}  <!-- Display title on its own line -->
-      <div class="exif-data">
-        {{ with .Tags.FNumber }}ƒ/{{ div (float .) 1.0 }}{{ end }}
-        {{ with .Tags.ExposureTime }} • {{ . }}{{ end }}
-        {{ with .Tags.ISO }} • ISO {{ . }}{{ end }}
-      </div>
+      {{ .Tags.Title }}
+      {{ if .Tags.Model }} • {{ .Tags.Model }}{{ end }}
+      {{ if .Tags.FNumber }} • ƒ/{{ div (float .Tags.FNumber) 1.0 }}{{ end }}
+      {{ if .Tags.ExposureTime }} • {{ .Tags.ExposureTime }}{{ end }}
+      {{ if .Tags.ISO }} • ISO {{ .Tags.ISO }}{{ end }}
     </figcaption>
   {{ end }}
 </figure>
