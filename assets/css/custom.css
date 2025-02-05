@@ -49,10 +49,12 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   display: none;
 }
 
-/* Remove padding or hide the empty div causing extra space */
+/* Remove the padding causing the empty space */
 .px-6.pt-4.pb-2 {
-  display: none;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
 }
+
 
 
 
