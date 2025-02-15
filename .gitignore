@@ -4,3 +4,5 @@
 # Ignore other build artifacts or large files
 *.log
 *.tmp
+
+.DS_Store
