@@ -1,6 +1,6 @@
 ---
-title: "Vinter"
-date: "2026-02-07"
+title: "Another World"
+date: "2025-02-08"
 layout: "single"
 ---
 {{< exif src="featured.jpg" >}}
