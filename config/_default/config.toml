@@ -23,9 +23,13 @@ enableEmoji = true
 
 [imaging]
   anchor = 'Center'
-  hint = 'photo'
-  quality = 100
   resampleFilter = 'Lanczos'
+
+  [imaging.jpeg]
+  quality = 100
+
+  [imaging.webp]
+  hint = 'photo'
 
 [taxonomies]
   tag = "tags"

@@ -24,15 +24,15 @@
   <img src="{{ $default.RelPermalink }}"
     srcset="{{ delimit $srcset ", " }}"
     sizes="(min-width: 80rem) 64rem, (min-width: 64rem) calc(100vw - 16rem), (min-width: 48rem) calc(100vw - 12rem), (min-width: 40rem) calc(100vw - 7rem), calc(100vw - 3rem)"
-    width="{{ $default.Width }}" height="{{ $default.Height }}" alt="{{ $alt }}">
+    width="{{ .Width }}" height="{{ .Height }}" alt="{{ $alt }}">
   <figcaption class="exif-caption">
-    {{ with .Exif }}
+    {{ with .Meta.Exif }}
       <div class="exif-title">{{ $postTitle }}</div>
       <div class="exif-details">
-        {{ with .Tags.Model }}{{ . }} • {{ end }}
-        {{ with .Tags.FNumber }}ƒ/{{ div (float .) 1.0 }}{{ end }}
-        {{ with .Tags.ExposureTime }} • {{ . }}{{ end }}
-        {{ with .Tags.ISO }} • ISO {{ . }}{{ end }}
+        {{ with .Model }}{{ . }} • {{ end }}
+        {{ with .FNumber }}ƒ/{{ div (float .) 1.0 }}{{ end }}
+        {{ with .ExposureTime }} • {{ . }}{{ end }}
+        {{ with .ISO }} • ISO {{ . }}{{ end }}
       </div>
     {{ end }}
     <a href="{{ .RelPermalink }}">View full-size image</a>
