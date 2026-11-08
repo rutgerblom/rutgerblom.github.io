@@ -39,30 +39,27 @@ h2.mt-8.text-2xl.font-extrabold.mb-10 {
   color: #555; /* Optional: set color for EXIF details */
 }
 
-/* Hide the post title inside the card */
-.px-6 .font-bold.text-xl {
+/* Keep the gallery cards image-only while preserving the focusable link. */
+.article-link--card > .thumbnail_card {
+  height: 200px;
+  aspect-ratio: auto;
+}
+
+.article-link--card > .p-4 {
+  padding: 0;
+}
+
+.article-link--card > .p-4 > .text-sm,
+.article-link--card > .px-6.pt-4.pb-2 {
   display: none;
 }
 
-/* Remove bottom padding for the card container */
-.px-6.py-4 {
-  padding-bottom: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Hide the date by targeting the container div */
-.text-sm.text-neutral-500 .flex {
-  display: none;
-}
-
-/* Remove space under the title (if needed) or adjust padding for the title container */
-.font-bold.text-xl {
-  padding-bottom: 0 !important;
-}
-
-/* Remove padding or hide the empty div causing the extra space */
-.px-6.pt-4.pb-2 {
-  display: none;
+/* Use the full gallery width for photo posts. */
+#single_header,
+#main-content > article > footer,
+#main-content > article .article-content,
+#main-content > article .min-h-0:has(> .article-content) {
+  max-width: 100%;
 }
 
 /* Hide the date above the image */
@@ -90,15 +87,3 @@ section h2.mt-12 {
 section.space-y-10 {
   margin-top: -20px !important;  /* Adjust the value as needed */
 }
-
-
-
-
-
-
-
-
-
-
-
-
