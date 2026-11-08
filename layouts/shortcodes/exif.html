@@ -1,22 +1,32 @@
 {{- $imageName := .Get "src" -}}
 {{- $alt := .Get "alt" -}}
-
 {{- $postTitle := .Page.Title -}}
-
-{{- $postDir := .Page.File.Dir -}}  
-{{- $imagePath := printf "%s%s" $postDir $imageName -}}
-
 {{- $originalImage := .Page.Resources.GetMatch $imageName -}}
 
+{{- with $originalImage }}
+  {{- $variants := slice }}
+  {{- range slice 800 1200 }}
+    {{- if lt . $originalImage.Width }}
+      {{- $variants = $variants | append ($originalImage.Resize (printf "%dx webp q88" .)) }}
+    {{- end }}
+  {{- end }}
+  {{- if le .Width 2048 }}
+    {{- $variants = $variants | append (.Process "webp q88") }}
+  {{- else }}
+    {{- $variants = $variants | append (.Resize "2048x webp q88") }}
+  {{- end }}
+  {{- $srcset := slice }}
+  {{- range $variants }}
+    {{- $srcset = $srcset | append (printf "%s %dw" .RelPermalink .Width) }}
+  {{- end }}
+  {{- $default := index $variants 0 }}
 <figure class="exif-figure">
-  {{ with $originalImage }}
-    <img src="{{ .RelPermalink }}" alt="{{ $alt }}">
-  {{ else }}
-    <p>Error: Image {{ $imagePath }} not found</p>
-  {{ end }}
-
-  {{ with $originalImage.Exif }}
-    <figcaption class="exif-caption">
+  <img src="{{ $default.RelPermalink }}"
+    srcset="{{ delimit $srcset ", " }}"
+    sizes="(min-width: 80rem) 64rem, (min-width: 64rem) calc(100vw - 16rem), (min-width: 48rem) calc(100vw - 12rem), (min-width: 40rem) calc(100vw - 7rem), calc(100vw - 3rem)"
+    width="{{ $default.Width }}" height="{{ $default.Height }}" alt="{{ $alt }}">
+  <figcaption class="exif-caption">
+    {{ with .Exif }}
       <div class="exif-title">{{ $postTitle }}</div>
       <div class="exif-details">
         {{ with .Tags.Model }}{{ . }} • {{ end }}
@@ -24,6 +34,10 @@
         {{ with .Tags.ExposureTime }} • {{ . }}{{ end }}
         {{ with .Tags.ISO }} • ISO {{ . }}{{ end }}
       </div>
-    </figcaption>
-  {{ end }}
+    {{ end }}
+    <a href="{{ .RelPermalink }}">View full-size image</a>
+  </figcaption>
 </figure>
+{{- else }}
+  {{- errorf "Image %q not found at %s" $imageName .Position }}
+{{- end }}
